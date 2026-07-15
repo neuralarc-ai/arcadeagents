@@ -1,30 +1,47 @@
-# Arcade Agents — Landing Page
+# Arcade Agents — Website
 
-The static landing page for **Arcade Agents** — watch every AI coding agent you run, see what each one is doing, and approve or stop what it wants, right from your MacBook notch. Works with Claude Code, Codex, Grok Build, and Kiro CLI.
+The marketing site **and** the Stripe subscription + offline license-key flow for
+**Arcade Agents**, built with Next.js (App Router).
 
-## Contents
+## What's here
 
-| File | Description |
+| Path | Purpose |
 | --- | --- |
-| `index.html` | The single-page site (self-contained HTML/CSS/JS). |
-| `ArcadeAgents-1.0.0.dmg` | macOS installer, linked from the Download button. |
-| `ArcadeAgents-Intro-720p.mp4` | Intro / demo video. |
+| `app/page.tsx` | Landing page (React), `app/globals.css`, `public/landing.js` (canvas engine) |
+| `app/checkout` · `app/success` | Subscribe (email → Stripe) and reveal-your-key pages |
+| `app/api/{create-checkout,webhook,get-key}` | Stripe checkout, webhook (mints the key), key polling |
+| `lib/*` | Framework-agnostic, dependency-injected logic (license, checkout, webhook, get-key, stripe, email) |
+| `test/*` | Vitest unit tests incl. golden-vector license parity |
+| `public/ArcadeAgents-1.0.0.dmg` | macOS installer, linked from the Download button |
 
-## Run locally
+## Product
 
-It's a static page — open `index.html` directly, or serve the folder:
+$4.99 / year subscription (Stripe). On payment, a stateless HMAC license key bound to the
+buyer's email is minted in the webhook, stored on the Stripe subscription metadata (no
+database), and emailed via Resend. The success page reveals it.
+
+## Develop
 
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+npm install
+cp .env.local.example .env.local   # then fill in real values
+npm run dev                        # http://localhost:3000
+npm test                           # unit tests
+npm run build                      # production build
 ```
 
-## Deploy with GitHub Pages
+### Stripe setup (one-time)
 
-The site lives at the repository root, so it's ready for GitHub Pages:
+1. Create a Product with a **$4.99 / year** recurring Price → `STRIPE_PRICE_ID`.
+2. Add a webhook endpoint → `/api/webhook`, subscribing to
+   `checkout.session.completed`, `invoice.paid`, `customer.subscription.deleted`,
+   `invoice.payment_failed` → `STRIPE_WEBHOOK_SECRET`.
+3. Set the env vars from `.env.local.example` (server-side only — never `NEXT_PUBLIC_`).
+4. Local: `stripe listen --forward-to localhost:3000/api/webhook`, test card `4242 4242 4242 4242`.
 
-1. **Settings → Pages**
-2. **Source:** Deploy from a branch
-3. **Branch:** `main` / `root`
+## Deploy
 
-It will be served at `https://neuralarc-ai.github.io/arcadeagents/`.
+Deploy on Vercel from the repo root. Set the env vars per environment (Production **and**
+Preview).
+
+Built by [Fahrenheit Research](https://www.f-r.co/).
