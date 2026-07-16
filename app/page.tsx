@@ -3,7 +3,7 @@ import Script from "next/script";
 export const metadata = {
   title: "Arcade Agents — a control panel for your AI agents, in the notch",
   description:
-    "Watch your AI coding agents, approve what they want to do, and jump back — from your MacBook notch. Claude Code, Codex, Grok Build, Kiro CLI.",
+    "Watch your AI coding agents, approve what they want to do, and jump back — from your MacBook notch. Claude Code, Codex, Grok Build.",
 };
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
               See it work
             </a>
           </div>
-          <p className="hero-note">Claude Code · Codex · Grok Build · Kiro CLI</p>
+          <p className="hero-note">Claude Code · Codex · Grok Build</p>
 
           {/* interactive notch demo */}
           <div className="stage" id="watch">
@@ -124,7 +124,7 @@ export default function Home() {
               <canvas data-sprite="grok:thinking:pink" width="64" height="64"></canvas>
               <h3>A creature per agent</h3>
               <p>
-                Claude, Codex, Grok and Kiro each get their own body — you can
+                Claude, Codex and Grok each get their own body — you can
                 tell them apart at a glance. The shape says which tool it&apos;s
                 using; the colour says whether you&apos;re needed:{" "}
                 <span className="accent-pink">pink working</span>,{" "}
@@ -548,11 +548,6 @@ export default function Home() {
               <div className="an">Grok Build</div>
               <div className="as accent-green">watching</div>
             </div>
-            <div className="agent-card reveal">
-              <canvas data-sprite="kiro:idle:yellow" width="64" height="64"></canvas>
-              <div className="an">Kiro CLI</div>
-              <div className="as accent-yellow">coming soon</div>
-            </div>
           </div>
         </div>
       </section>
@@ -600,7 +595,7 @@ export default function Home() {
               <summary>Which agents does it support?</summary>
               <p>
                 Claude Code, Codex and Grok Build today, with real approvals and
-                live status — Kiro CLI is on the way. Each one speaks a different
+                live status. Each one speaks a different
                 hook dialect, and Arcade Agents translates all of them, so an
                 approval genuinely blocks the agent until you decide.
               </p>

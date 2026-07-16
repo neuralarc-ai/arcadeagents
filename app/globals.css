@@ -184,7 +184,7 @@
   .trust{margin-left:auto; font-family:var(--mono); font-weight:800; font-size:16px}
 
   /* agents strip */
-  .agents-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:8px}
+  .agents-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px}
   .agent-card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px; text-align:center}
   .agent-card canvas{width:40px; height:40px; image-rendering:pixelated}
   .agent-card .an{font-family:var(--mono); font-weight:700; font-size:14px; margin-top:10px}
