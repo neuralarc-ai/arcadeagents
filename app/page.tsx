@@ -574,7 +574,7 @@ export default function Home() {
               <a className="btn btn-primary btn-lg" href="/checkout">
                 Subscribe — $4.99/yr
               </a>
-              <a className="btn btn-ghost btn-lg" href="/ArcadeAgents-1.0.0.dmg">
+              <a className="btn btn-ghost btn-lg" href="/ArcadeAgents.dmg">
                 ▼ Download for Mac
               </a>
             </div>

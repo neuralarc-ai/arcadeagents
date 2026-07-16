@@ -12,7 +12,7 @@ The marketing site **and** the Stripe subscription + offline license-key flow fo
 | `app/api/{create-checkout,webhook,get-key}` | Stripe checkout, webhook (mints the key), key polling |
 | `lib/*` | Framework-agnostic, dependency-injected logic (license, checkout, webhook, get-key, stripe, email) |
 | `test/*` | Vitest unit tests incl. golden-vector license parity |
-| `public/ArcadeAgents-1.0.0.dmg` | macOS installer, linked from the Download button |
+| `public/ArcadeAgents.dmg` | macOS installer, linked from the Download button |
 
 ## Product
 
