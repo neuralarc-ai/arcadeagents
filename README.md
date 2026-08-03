@@ -1,7 +1,7 @@
-# Arcade Agents — Website
+# Magic Agents — Website
 
 The marketing site **and** the Stripe subscription + offline license-key flow for
-**Arcade Agents**, built with Next.js (App Router).
+**Magic Agents**, built with Next.js (App Router).
 
 ## What's here
 

@@ -174,7 +174,7 @@ function collapseIsland(){
 }
 
 const DEMO_AGENTS = [
-  {agent:"claude", name:"Claude Code", where:"~/arcade-agents", tool:"Bash"},
+  {agent:"claude", name:"Claude Code", where:"~/magic-agents", tool:"Bash"},
   {agent:"codex",  name:"Codex",       where:"~/friday",        tool:"Edit"},
   {agent:"grok",   name:"Grok Build",  where:"~/sparrow",       tool:"Read"},
 ];
@@ -191,7 +191,7 @@ function gateCard(){
   panelBody.innerHTML = `
     <div class="gate-top">
       <canvas id="gateSprite" width="56" height="56"></canvas>
-      <div><div class="gate-name">Claude Code</div><div class="gate-sub">needs approval · arcade-agents</div></div>
+      <div><div class="gate-name">Claude Code</div><div class="gate-sub">needs approval · magic-agents</div></div>
       <div class="gate-tool">Bash</div>
     </div>
     <div class="gate-risk"><span class="dot" style="background:var(--pink)"></span>

@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Arcade Agents — a control panel for your AI agents, in the notch",
+  title: "Magic Agents — a control panel for your AI agents, in the notch",
   description:
     "Watch your AI coding agents, approve what they want to do, and jump back — from your MacBook notch. Claude Code, Codex, Grok Build.",
 };
@@ -13,7 +13,7 @@ export default function Home() {
         <div className="wrap nav-in">
           <a className="brand" href="#top">
             <canvas data-icon="cabinet" width="52" height="52"></canvas>
-            Arcade&nbsp;Agents
+            Magic&nbsp;Agents
           </a>
           <div className="nav-links">
             <a href="#watch">Watch</a>
@@ -40,7 +40,7 @@ export default function Home() {
             live in the <span className="accent-pink">notch</span>.
           </h1>
           <p className="hero-sub">
-            Arcade Agents watches every AI coding agent you run, shows you what
+            Magic Agents watches every AI coding agent you run, shows you what
             each one is doing, and lets you approve — or stop — what it wants,
             without leaving your editor.
           </p>
@@ -71,7 +71,7 @@ export default function Home() {
               {/* expanded layer */}
               <div className="layer layer-panel" id="layerPanel">
                 <div className="panel-head">
-                  <span className="lbl">ARCADE&nbsp;AGENTS</span>
+                  <span className="lbl">MAGIC&nbsp;AGENTS</span>
                   <span className="count" id="activeCount">
                     3 active
                   </span>
@@ -460,7 +460,7 @@ export default function Home() {
               <p>
                 Run Claude and Grok in the same project and they will happily
                 stomp each other&apos;s edits — neither one knows the other
-                exists. Arcade Agents does, and it says so, loudly, before it
+                exists. Magic Agents does, and it says so, loudly, before it
                 costs you an hour. It also tracks your git worktrees, so you can
                 give each agent its own.
               </p>
@@ -596,7 +596,7 @@ export default function Home() {
               <p>
                 Claude Code, Codex and Grok Build today, with real approvals and
                 live status. Each one speaks a different
-                hook dialect, and Arcade Agents translates all of them, so an
+                hook dialect, and Magic Agents translates all of them, so an
                 approval genuinely blocks the agent until you decide.
               </p>
             </details>
@@ -675,7 +675,7 @@ export default function Home() {
           <div>
             <a className="brand" href="#top">
               <canvas data-icon="cabinet" width="46" height="46"></canvas>
-              Arcade&nbsp;Agents
+              Magic&nbsp;Agents
             </a>
             <p style={{ marginTop: "10px" }}>
               Built by{" "}

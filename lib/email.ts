@@ -18,22 +18,22 @@ export async function sendLicenseEmail(
     return;
   }
   const from =
-    process.env.LICENSE_FROM_EMAIL ?? "Arcade Agents <keys@arcadeagents.app>";
+    process.env.LICENSE_FROM_EMAIL ?? "Magic Agents <keys@arcadeagents.app>";
   const validUntil = expiry.toISOString().slice(0, 10); // YYYY-MM-DD
 
   const resend = new Resend(apiKey);
   await resend.emails.send({
     from,
     to: email,
-    subject: "Your Arcade Agents license key",
+    subject: "Your Magic Agents license key",
     text: [
-      "Thanks for subscribing to Arcade Agents.",
+      "Thanks for subscribing to Magic Agents.",
       "",
       `License key:     ${key}`,
       `Licensed email:  ${email}`,
       `Valid until:     ${validUntil}`,
       "",
-      "Activate by entering this email and key in the Arcade Agents app.",
+      "Activate by entering this email and key in the Magic Agents app.",
       "Keep this email — it is your proof of purchase and the guaranteed copy of your key.",
     ].join("\n"),
   });

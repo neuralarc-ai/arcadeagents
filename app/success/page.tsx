@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LicenseKey } from "@/components/LicenseKey/LicenseKey";
 
 export const metadata = {
-  title: "Your license key — Arcade Agents",
+  title: "Your license key — Magic Agents",
 };
 
 export default function SuccessPage() {
@@ -26,7 +26,7 @@ export default function SuccessPage() {
           href="/"
           style={{ color: "#6f6f7a", textDecoration: "none", fontSize: 14 }}
         >
-          ← Arcade Agents
+          ← Magic Agents
         </Link>
         <div style={{ marginTop: 20 }}>
           <Suspense fallback={<p style={{ color: "#a8a8b3" }}>Loading…</p>}>

@@ -134,7 +134,7 @@ export function LicenseKey() {
       {expiryLabel && (
         <p style={{ color: "#6f6f7a", fontSize: 13, marginTop: 12 }}>
           Valid until {expiryLabel}. Activate by entering your email and this
-          key in the Arcade Agents app.
+          key in the Magic Agents app.
         </p>
       )}
     </div>
