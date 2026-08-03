@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LicenseKey } from "@/components/LicenseKey/LicenseKey";
 
 export const metadata = {
-  title: "Your license key — Magic Agents",
+  title: "Your license key - Magic Agents",
 };
 
 export default function SuccessPage() {

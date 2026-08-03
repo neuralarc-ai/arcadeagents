@@ -1,4 +1,4 @@
-# Magic Agents — Website
+# Magic Agents - Website
 
 The marketing site **and** the Stripe subscription + offline license-key flow for
 **Magic Agents**, built with Next.js (App Router).
@@ -36,7 +36,7 @@ npm run build                      # production build
 2. Add a webhook endpoint → `/api/webhook`, subscribing to
    `checkout.session.completed`, `invoice.paid`, `customer.subscription.deleted`,
    `invoice.payment_failed` → `STRIPE_WEBHOOK_SECRET`.
-3. Set the env vars from `.env.local.example` (server-side only — never `NEXT_PUBLIC_`).
+3. Set the env vars from `.env.local.example` (server-side only - never `NEXT_PUBLIC_`).
 4. Local: `stripe listen --forward-to localhost:3000/api/webhook`, test card `4242 4242 4242 4242`.
 
 ## Deploy

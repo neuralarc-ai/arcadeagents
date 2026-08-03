@@ -42,6 +42,6 @@ export async function getKey(
     };
   }
 
-  // Paid, but the webhook has not stored the key yet — client keeps polling.
+  // Paid, but the webhook has not stored the key yet - client keeps polling.
   return { status: 200, body: { pending: true } };
 }

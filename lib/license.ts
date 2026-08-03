@@ -38,7 +38,7 @@ function requireSecret(secret?: string): string {
   return s;
 }
 
-/** trim + lowercase — load-bearing: the validator must normalize identically. */
+/** trim + lowercase - load-bearing: the validator must normalize identically. */
 function normalizeEmail(email: string): string {
   return email.trim().toLowerCase();
 }
@@ -112,7 +112,7 @@ export function generateKey(
 }
 
 export interface ValidationResult {
-  /** Signature matches the email — the key is authentic. */
+  /** Signature matches the email - the key is authentic. */
   valid: boolean;
   /** Authentic AND not past its expiry date. */
   active: boolean;

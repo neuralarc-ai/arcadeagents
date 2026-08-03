@@ -1,9 +1,9 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Magic Agents — a control panel for your AI agents, in the notch",
+  title: "Magic Agents - a control panel for your AI agents, in the notch",
   description:
-    "Watch your AI coding agents, approve what they want to do, and jump back — from your MacBook notch. Claude Code, Codex, Grok Build.",
+    "Watch your AI coding agents, approve what they want to do, and jump back - from your MacBook notch. Claude Code, Codex, Grok Build.",
 };
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
           </h1>
           <p className="hero-sub">
             Magic Agents watches every AI coding agent you run, shows you what
-            each one is doing, and lets you approve — or stop — what it wants,
+            each one is doing, and lets you approve - or stop - what it wants,
             without leaving your editor.
           </p>
           <div className="hero-cta">
@@ -53,6 +53,26 @@ export default function Home() {
             </a>
           </div>
           <p className="hero-note">Claude Code · Codex · Grok Build</p>
+
+          {/* intro video */}
+          <div
+            style={{
+              maxWidth: 900,
+              margin: "44px auto 0",
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid var(--line)",
+              boxShadow: "0 34px 90px -26px rgba(235,95,165,.25)",
+            }}
+          >
+            <video
+              src="/MagicAgents-Intro.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              style={{ width: "100%", display: "block", background: "#000" }}
+            />
+          </div>
 
           {/* interactive notch demo */}
           <div className="stage" id="watch">
@@ -90,7 +110,7 @@ export default function Home() {
               <button data-jump="lap">victory lap</button>
             </div>
             <p className="demo-hint">
-              The real thing, at real size — click a state, try Allow or Deny,
+              The real thing, at real size - click a state, try Allow or Deny,
               and watch a finished agent take its lap.
             </p>
           </div>
@@ -104,7 +124,7 @@ export default function Home() {
             <span className="eyebrow">Every agent. One glance.</span>
             <h2>Stop context-switching to babysit a robot.</h2>
             <p>
-              From the moment an agent starts to the moment it needs you — all
+              From the moment an agent starts to the moment it needs you - all
               in a strip of black the width of your notch.
             </p>
           </div>
@@ -113,7 +133,7 @@ export default function Home() {
               <canvas data-sprite="claude:shell:pink" width="64" height="64"></canvas>
               <h3>Watch it work, live</h3>
               <p>
-                Not a log of what finished — what&apos;s happening <em>now</em>.
+                Not a log of what finished - what&apos;s happening <em>now</em>.
                 The notch reads{" "}
                 <span className="accent-pink">Running&nbsp;Bash</span> while the
                 command is still running, so a long build looks busy instead of
@@ -124,7 +144,7 @@ export default function Home() {
               <canvas data-sprite="grok:thinking:pink" width="64" height="64"></canvas>
               <h3>A creature per agent</h3>
               <p>
-                Claude, Codex and Grok each get their own body — you can
+                Claude, Codex and Grok each get their own body - you can
                 tell them apart at a glance. The shape says which tool it&apos;s
                 using; the colour says whether you&apos;re needed:{" "}
                 <span className="accent-pink">pink working</span>,{" "}
@@ -167,7 +187,7 @@ export default function Home() {
                 light up red with the reason spelled out; a{" "}
                 <span className="accent-green">git status</span> barely
                 registers. Tick &quot;always allow&quot; on the boring ones and
-                it stops asking — but a destructive command can never become a
+                it stops asking - but a destructive command can never become a
                 rule.
               </p>
             </div>
@@ -178,7 +198,7 @@ export default function Home() {
                   DESTRUCTIVE
                 </span>
                 <span style={{ color: "var(--ink3)" }}>
-                  force push — rewrites remote history
+                  force push - rewrites remote history
                 </span>
               </div>
               <div className="gate-cmd">git push --force origin main</div>
@@ -194,7 +214,7 @@ export default function Home() {
               <span className="eyebrow">Approve from your phone</span>
               <h3>Start a long run. Walk away.</h3>
               <p>
-                The gate already waits up to 24 hours for a human — so answering
+                The gate already waits up to 24 hours for a human - so answering
                 from the kitchen costs nothing. Scan a QR, and pending approvals
                 show up on your phone with the same risk read. Local network
                 only. No cloud, no account, off by default.
@@ -238,7 +258,7 @@ export default function Home() {
               <h3>What did it touch while you were gone?</h3>
               <p>
                 Every tool call and every decision, written to disk as it
-                happens. Come back from lunch and read exactly what ran — or
+                happens. Come back from lunch and read exactly what ran - or
                 hand the CSV to whoever asks whether agents can be trusted
                 against production.
               </p>
@@ -272,7 +292,7 @@ export default function Home() {
               <span className="eyebrow">The scoreboard</span>
               <h3>Which agent is earning its keep?</h3>
               <p>
-                Tools run, approvals granted, and a trust score — the share of
+                Tools run, approvals granted, and a trust score - the share of
                 an agent&apos;s requests you actually said yes to. An agent you
                 keep denying is one you don&apos;t trust, and now you can see it.
               </p>
@@ -375,7 +395,7 @@ export default function Home() {
               <p>
                 When an agent completes, its creature goes{" "}
                 <span className="accent-green">green</span> and runs the length
-                of the island — hopping, throwing off pixel sparks. A second and
+                of the island - hopping, throwing off pixel sparks. A second and
                 a half, then it&apos;s back to being a quiet ear. It&apos;s how
                 you catch a finished run out of the corner of your eye instead of
                 alt-tabbing to check.
@@ -407,8 +427,8 @@ export default function Home() {
               <h3>A destructive command isn&apos;t just another card.</h3>
               <p>
                 When something scores{" "}
-                <span className="accent-pink">critical</span> — a force push, a
-                recursive delete — the island doesn&apos;t quietly ask. The card
+                <span className="accent-pink">critical</span> - a force push, a
+                recursive delete - the island doesn&apos;t quietly ask. The card
                 turns into a boss fight, the creature grows, and the reason is
                 spelled out in plain English. Denying it is the win, and the
                 scoreboard counts it.
@@ -459,7 +479,7 @@ export default function Home() {
               <h3>Two agents, one repo, no idea about each other.</h3>
               <p>
                 Run Claude and Grok in the same project and they will happily
-                stomp each other&apos;s edits — neither one knows the other
+                stomp each other&apos;s edits - neither one knows the other
                 exists. Magic Agents does, and it says so, loudly, before it
                 costs you an hour. It also tracks your git worktrees, so you can
                 give each agent its own.
@@ -528,7 +548,7 @@ export default function Home() {
             <span className="eyebrow">Zero config</span>
             <h2>Launch it once. It wires up your agents.</h2>
             <p>
-              It writes one hook into each agent&apos;s own config — your
+              It writes one hook into each agent&apos;s own config - your
               existing hooks preserved, every change backed up first.
             </p>
           </div>
@@ -567,7 +587,7 @@ export default function Home() {
               style={{ justifyContent: "center", marginTop: "26px" }}
             >
               <a className="btn btn-primary btn-lg" href="/checkout">
-                Subscribe — $4.99/yr
+                Subscribe - $4.99/yr
               </a>
               <a className="btn btn-ghost btn-lg" href="/MagicAgents.dmg">
                 ▼ Download for Mac
@@ -604,7 +624,7 @@ export default function Home() {
               <summary>Why does Grok ask about every single command?</summary>
               <p>
                 Because it has to. Grok exposes only one place to intercept a
-                tool call, so every call passes through the gate — where Claude
+                tool call, so every call passes through the gate - where Claude
                 and Codex have a dedicated approval event and everything else
                 flows straight through. Set <em>Auto-approve read-only</em> in
                 Settings and the boring ones stop asking; teach it a rule and
@@ -617,7 +637,7 @@ export default function Home() {
                 No. There&apos;s no cloud, no account, and no telemetry. Agents
                 talk to the app over a local socket. Phone approval, when you
                 turn it on, serves a page on your own Wi-Fi behind a fresh token
-                — it never touches the internet.
+                - it never touches the internet.
               </p>
             </details>
             <details className="reveal">
@@ -625,7 +645,7 @@ export default function Home() {
               <p>
                 When an agent wants to run a tool, its hook calls a tiny bridge
                 that opens the island and waits. You click Allow or Deny, and the
-                agent — blocked the whole time — proceeds or stops. If the app
+                agent - blocked the whole time - proceeds or stops. If the app
                 isn&apos;t running, the bridge gets out of the way instantly so
                 nothing ever hangs.
               </p>
@@ -643,7 +663,7 @@ export default function Home() {
               <p>
                 No. Native Swift, no Electron, under 50MB of RAM and near-zero
                 CPU when idle. The characters and the 8-bit sounds are both
-                generated in code — there isn&apos;t a single image or audio file
+                generated in code - there isn&apos;t a single image or audio file
                 in the app.
               </p>
             </details>
@@ -653,7 +673,7 @@ export default function Home() {
                 That&apos;s the point. Every session shows up as its own creature
                 in the notch, approvals queue so none get lost, and the Worktrees
                 view tells you which agent is live in which git worktree. If two
-                agents end up in the same project, it warns you — they can&apos;t
+                agents end up in the same project, it warns you - they can&apos;t
                 see each other, but it can.
               </p>
             </details>
@@ -662,7 +682,7 @@ export default function Home() {
               <p>
                 The app is signed with a Developer ID certificate. The first time
                 you open it, Control-click the app in Applications and choose{" "}
-                <em>Open</em> — after that it launches normally. It&apos;s a
+                <em>Open</em> - after that it launches normally. It&apos;s a
                 one-time step.
               </p>
             </details>

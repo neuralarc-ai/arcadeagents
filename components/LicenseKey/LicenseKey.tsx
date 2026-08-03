@@ -41,7 +41,7 @@ export function LicenseKey() {
           return;
         }
       } catch {
-        // network hiccup — fall through to retry
+        // network hiccup - fall through to retry
       }
       if (cancelled) return;
       if (tries >= MAX_TRIES) {
@@ -63,7 +63,7 @@ export function LicenseKey() {
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1800);
     } catch {
-      /* clipboard blocked — user can select manually */
+      /* clipboard blocked - user can select manually */
     }
   }
 
@@ -77,7 +77,7 @@ export function LicenseKey() {
         <h1 style={{ fontSize: 26, margin: "0 0 10px" }}>Thank you!</h1>
         <p style={{ color: "#a8a8b3", lineHeight: 1.6 }}>
           Your license key is on its way to your inbox. Check your email (and
-          spam) — it has your key, the licensed email, and the valid-until date.
+          spam) - it has your key, the licensed email, and the valid-until date.
         </p>
       </div>
     );

@@ -7,7 +7,7 @@ import { sendLicenseEmail } from "@/lib/email";
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
-  // RAW body — Stripe signs the exact bytes, so it must NOT be JSON-parsed first.
+  // RAW body - Stripe signs the exact bytes, so it must NOT be JSON-parsed first.
   const rawBody = await req.text();
   const signature = req.headers.get("stripe-signature") ?? "";
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET ?? "";

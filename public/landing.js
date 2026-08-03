@@ -1,8 +1,8 @@
-/* Magic Agents landing — pixel-creature engine + interactive notch demo.
+/* Magic Agents landing - pixel-creature engine + interactive notch demo.
    Ported verbatim from the original index.html <script>. Loaded via next/script
    (afterInteractive) so it runs once against the server-rendered markup by id. */
 /* =========================================================================
-   Pixel creatures — ported from the app's Creature.swift.
+   Pixel creatures - ported from the app's Creature.swift.
    Body = which agent, crown = what it's doing, colour = status.
    16×16 grids; '#' solid, '+' mid, '.' empty (empty inside a body is an eye).
    ========================================================================= */
@@ -43,7 +43,7 @@ function statusColor(state){
 }
 
 /* render one creature onto a canvas, animating its two frames.
-   Each sprite registers with a single shared clock and only repaints when on-screen —
+   Each sprite registers with a single shared clock and only repaints when on-screen -
    a page full of continuously-animating canvases is otherwise needless load. */
 const SPRITES = [];
 const spriteVisible = new WeakMap();
@@ -75,7 +75,7 @@ function mountSprite(canvas, agent, state, colorKey){
 }
 
 /* ---- the cabinet icon, drawn to canvas ---- */
-/* The app icon, flat 2D — ink field, pink creature, three status pips. Same mark the DMG
+/* The app icon, flat 2D - ink field, pink creature, three status pips. Same mark the DMG
    ships, drawn here rather than shipped as an image so the page stays self-contained. */
 function mountCabinet(canvas){
   const ctx = canvas.getContext('2d'), S = canvas.width, U = S/100;
@@ -89,14 +89,14 @@ function mountCabinet(canvas){
   for(let y=0;y<16;y++) for(let x=0;x<16;x++)
     if(g[y][x] !== '.') ctx.fillRect(ox + x*cell, oy + y*cell, cell*0.9, cell*0.9);
 
-  // pink · green · yellow — the whole colour language, stated once
+  // pink · green · yellow - the whole colour language, stated once
   [["#fa87bf",36],["#8ce88c",50],["#fad96b",64]].forEach(([col,cx])=>{
     ctx.fillStyle = col; ctx.beginPath(); ctx.arc(cx*U, 82*U, 4*U, 0, 7); ctx.fill();
   });
 }
 
 /* =========================================================================
-   Web Audio — the app's 8-bit blips, ported.
+   Web Audio - the app's 8-bit blips, ported.
    ========================================================================= */
 let AC;
 function blip(notes, dur){
@@ -147,7 +147,7 @@ document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) startCl
 startClock();
 
 /* =========================================================================
-   Interactive island demo — a little state machine.
+   Interactive island demo - a little state machine.
    ========================================================================= */
 const island = document.getElementById('island');
 const ears = document.getElementById('ears');
@@ -155,17 +155,17 @@ const panelBody = document.getElementById('panelBody');
 const layerPanel = document.getElementById('layerPanel');
 const collapsedActivity = document.getElementById('collapsedActivity');
 const activeCount = document.getElementById('activeCount');
-/* single source of truth for the collapsed height — read from the CSS var so the two can't drift */
+/* single source of truth for the collapsed height - read from the CSS var so the two can't drift */
 const COLLAPSED_H = getComputedStyle(document.documentElement).getPropertyValue('--isl-h').trim() || '46px';
 
 /* Open the island and animate its HEIGHT to exactly fit the panel content. CSS can't transition
    to `auto`, so we measure the panel's CONTENT (layer-panel is content-height, not stretched to
    the island bottom, so offsetHeight is the true content size regardless of the island's current
-   height) and set an explicit pixel height — the transition then eases in BOTH directions. */
+   height) and set an explicit pixel height - the transition then eases in BOTH directions. */
 function openPanel(){
   island.classList.add('open');
   // Reading offsetHeight forces a synchronous layout, so this is the true content height AFTER
-  // the width change from .open — no stale-frame race. Setting it inline drives the transition.
+  // the width change from .open - no stale-frame race. Setting it inline drives the transition.
   island.style.height = layerPanel.offsetHeight + 'px';
 }
 function collapseIsland(){
@@ -231,7 +231,7 @@ function collapse(){
 }
 
 /* =========================================================================
-   The victory lap — ported from Celebration.swift.
+   The victory lap - ported from Celebration.swift.
    When an agent finishes, its creature runs the island, hopping, throwing off pixel sparks
    in the three status colours. 1.5s, then the island snaps back to its ear.
    ========================================================================= */
@@ -240,7 +240,7 @@ const LAP_MS = 1500, LAP_SPARKS = 20;
 
 /* Draw one lap onto any canvas. `onEnd` lets the island collapse afterwards while the
    standalone feature-card demo simply loops. */
-/* One frame of the lap at progress p (0…1). Pure — no timers — so the island's one-shot lap and
+/* One frame of the lap at progress p (0…1). Pure - no timers - so the island's one-shot lap and
    the feature card's continuous loop can both drive it. */
 function paintLapFrame(canvas, agent, p){
   const ctx = canvas.getContext('2d');
@@ -255,7 +255,7 @@ function paintLapFrame(canvas, agent, p){
     if(age <= 0 || age >= 0.30) continue;
     const fade = 1 - age/0.30;
     const x = at*run + size/2;
-    // deterministic scatter — a real RNG would re-roll each frame and the sparks would jitter
+    // deterministic scatter - a real RNG would re-roll each frame and the sparks would jitter
     const j = Math.sin(i*12.9898)*43758.5453;
     const side = (j - Math.floor(j))*10 - 5;
     const up = Math.sin(i*2.1)*13;
@@ -293,7 +293,7 @@ function runVictoryLap(agent){
   island.style.height = '64px';
   cancelLap = paintLap(lapCanvas, agent, ()=> setTimeout(()=>{
     // A lap that's still running when the user jumps to another state must NOT drag the island
-    // back to collapsed underneath them — only finish the lap we're still actually in.
+    // back to collapsed underneath them - only finish the lap we're still actually in.
     if(!island.classList.contains('lap')) return;
     island.classList.remove('lap');
     collapse();
@@ -362,7 +362,7 @@ document.querySelectorAll('[data-jump]').forEach(btn=>{
 });
 
 /* demo sprites (ears, session list, gate) are created via mountSprite, so the shared clock
-   already animates them — no separate interval needed. Prune dead sprites when the demo
+   already animates them - no separate interval needed. Prune dead sprites when the demo
    re-renders so the SPRITES list doesn't grow without bound. */
 function pruneSprites(){
   for(let i=SPRITES.length-1;i>=0;i--){ if(!document.body.contains(SPRITES[i].canvas)) SPRITES.splice(i,1); }

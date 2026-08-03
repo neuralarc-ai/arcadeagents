@@ -30,7 +30,7 @@ export function CheckoutForm() {
   return (
     <form onSubmit={onSubmit} style={{ display: "grid", gap: 12 }}>
       <label htmlFor="email" style={{ fontSize: 14, color: "#a8a8b3" }}>
-        Email — your license key is bound to this address
+        Email - your license key is bound to this address
       </label>
       <input
         id="email"
@@ -65,7 +65,7 @@ export function CheckoutForm() {
           cursor: loading || !email ? "default" : "pointer",
         }}
       >
-        {loading ? "Redirecting to checkout…" : "Subscribe — $4.99/yr"}
+        {loading ? "Redirecting to checkout…" : "Subscribe - $4.99/yr"}
       </button>
       <p style={{ fontSize: 12, color: "#6f6f7a", margin: 0 }}>
         Secure payment by Stripe. Cancel anytime. Nothing leaves your Mac.

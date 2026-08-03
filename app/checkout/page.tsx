@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CheckoutForm } from "@/components/CheckoutForm/CheckoutForm";
 
 export const metadata = {
-  title: "Subscribe — Magic Agents",
+  title: "Subscribe - Magic Agents",
 };
 
 export default function CheckoutPage() {

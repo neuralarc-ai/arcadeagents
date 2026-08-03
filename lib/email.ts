@@ -14,7 +14,7 @@ export async function sendLicenseEmail(
 ): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.warn("[email] RESEND_API_KEY unset — skipping license email");
+    console.warn("[email] RESEND_API_KEY unset - skipping license email");
     return;
   }
   const from =
@@ -34,7 +34,7 @@ export async function sendLicenseEmail(
       `Valid until:     ${validUntil}`,
       "",
       "Activate by entering this email and key in the Magic Agents app.",
-      "Keep this email — it is your proof of purchase and the guaranteed copy of your key.",
+      "Keep this email - it is your proof of purchase and the guaranteed copy of your key.",
     ].join("\n"),
   });
 }

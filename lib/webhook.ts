@@ -43,7 +43,7 @@ async function issueKey(
   deps: WebhookDeps,
 ): Promise<void> {
   const { key, expiry } = deps.generateKey(email);
-  // Storage first — this MUST succeed (throwing propagates to a 500 → Stripe retry).
+  // Storage first - this MUST succeed (throwing propagates to a 500 → Stripe retry).
   await deps.updateSubscriptionMetadata(subscriptionId, {
     license_key: key,
     license_expiry: expiry.toISOString(),
