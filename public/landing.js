@@ -1,4 +1,4 @@
-/* Arcade Agents landing — pixel-creature engine + interactive notch demo.
+/* Magic Agents landing — pixel-creature engine + interactive notch demo.
    Ported verbatim from the original index.html <script>. Loaded via next/script
    (afterInteractive) so it runs once against the server-rendered markup by id. */
 /* =========================================================================
@@ -74,7 +74,7 @@ function mountSprite(canvas, agent, state, colorKey){
   return s;
 }
 
-/* ---- the arcade-cabinet icon, drawn to canvas ---- */
+/* ---- the cabinet icon, drawn to canvas ---- */
 /* The app icon, flat 2D — ink field, pink creature, three status pips. Same mark the DMG
    ships, drawn here rather than shipped as an image so the page stays self-contained. */
 function mountCabinet(canvas){

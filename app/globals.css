@@ -73,7 +73,7 @@
     background:radial-gradient(58% 62% at 50% 44%, rgba(150,60,110,.30), rgba(70,30,80,.10) 55%, transparent 74%);
     filter:blur(8px); pointer-events:none;
   }
-  .stage::after{ /* faint pixel-grid floor, fading out — ties it to the arcade world */
+  .stage::after{ /* faint pixel-grid floor, fading out — ties it to the pixel world */
     content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
     background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
                      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);

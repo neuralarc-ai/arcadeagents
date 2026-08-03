@@ -356,11 +356,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* the arcade layer */}
+      {/* the magic layer */}
       <section>
         <div className="wrap">
           <div className="sec-head reveal">
-            <span className="eyebrow">The arcade layer</span>
+            <span className="eyebrow">The magic layer</span>
             <h2>It&apos;s a serious tool. It just doesn&apos;t behave like one.</h2>
             <p>
               The safety machinery is real. The way it tells you about it
